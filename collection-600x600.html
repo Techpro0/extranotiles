@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>600×600MM Collection | Extrano Tiles</title>
+  <meta name="description" content="Explore Extrano Tiles' 600×600MM porcelain collection across Matt, Glossy, Outdoor and Galicha finishes." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/collection-600x600.css">
+  <link rel="stylesheet" href="assets/css/widget.css">
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery/3.7.1/jquery.min.js"></script>
+  <script src="assets/js/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="assets/js/home.js"></script>
+  <script src="assets/js/collection-600x600.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ╔═══════════════════════════════════════════════╗
+       ║  GLOBAL OVERLAYS  (outside site-wrap)         ║
+       ╚═══════════════════════════════════════════════╝ -->
+
+  <!-- Page-load black curtain -->
+  <div id="curtain"></div>
+
+  <!-- Background geometry canvas — grid + spider-web, sits behind everything -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" aria-hidden="true">
+    <button class="close-btn" onclick="closeMobile()" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="mm-group open">
+      <button type="button" class="mm-trigger" aria-expanded="true">
+        Collection
+        <svg class="mm-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="mm-sub">
+        <a href="collection-600x600.html" class="active">600×600mm</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+
+
+  <!-- ╔═══════════════════════════════════════════════╗
+       ║  #site-wrap — master wrapper                 ║
+       ╚═══════════════════════════════════════════════╝ -->
+  <div id="site-wrap">
+
+    <!-- ┌─────────────────────────────────────────────┐
+         │  #site-header  (fixed navbar)               │
+         └─────────────────────────────────────────────┘ -->
+    <header id="site-header">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Extrano Tiles" class="nav-logo-img"/>
+      </a>
+
+      <!-- Nav links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-drop active">
+          <a href="#">Collection</a>
+          <div class="drop-panel">
+            <a href="collection-600x600.html">600×600mm</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="ham" onclick="openMobile()" aria-label="Open menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </header>
+    <!-- / #site-header -->
+
+
+    <!-- ┌─────────────────────────────────────────────┐
+         │  #site-main — all page sections             │
+         └─────────────────────────────────────────────┘ -->
+    <main id="site-main">
+
+      <!-- ══════════════════════════════════════════
+           BREADCRUMB
+      ══════════════════════════════════════════ -->
+      <nav class="cc-crumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <a href="index.html#section-collection">Collection</a>
+        <span class="sep">›</span>
+        <span aria-current="page">600×600MM</span>
+      </nav>
+
+
+      <!-- ══════════════════════════════════════════
+           SECTION 1 — Hero (list ↔ detail)
+      ══════════════════════════════════════════ -->
+      <section id="section-collection-hero" class="site-section cc-hero">
+        <div class="cc-inner">
+
+          <!-- Heading -->
+          <div class="cc-head">
+            <p class="cc-eyebrow">600×600MM Series</p>
+            <h1 class="cc-title">
+              Built For Every<br>
+              <em>Surface, Every Style</em>
+            </h1>
+            <p class="cc-sub">
+              Four distinct finishes engineered in 600×600MM porcelain — pick the one
+              that fits the room you're designing for.
+            </p>
+          </div>
+
+          <!-- List + Detail -->
+          <div class="cc-grid">
+
+            <!-- ── Left: filter list ── -->
+            <div class="cc-list" role="tablist" aria-label="Finish variants">
+
+              <button type="button" class="cc-list-item is-active" data-target="matt"
+                id="cc-tab-matt" role="tab" aria-selected="true" aria-controls="cc-panel-matt" tabindex="0">
+                <span class="cc-num">01</span>
+                <span class="cc-label">Matt</span>
+                <svg class="cc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="13 6 19 12 13 18"/>
+                </svg>
+              </button>
+
+              <button type="button" class="cc-list-item" data-target="glossy"
+                id="cc-tab-glossy" role="tab" aria-selected="false" aria-controls="cc-panel-glossy" tabindex="-1">
+                <span class="cc-num">02</span>
+                <span class="cc-label">Glossy</span>
+                <svg class="cc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="13 6 19 12 13 18"/>
+                </svg>
+              </button>
+
+              <button type="button" class="cc-list-item" data-target="outdoor"
+                id="cc-tab-outdoor" role="tab" aria-selected="false" aria-controls="cc-panel-outdoor" tabindex="-1">
+                <span class="cc-num">03</span>
+                <span class="cc-label">Outdoor</span>
+                <svg class="cc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="13 6 19 12 13 18"/>
+                </svg>
+              </button>
+
+              <button type="button" class="cc-list-item" data-target="woodlook"
+                id="cc-tab-woodlook" role="tab" aria-selected="false" aria-controls="cc-panel-woodlook" tabindex="-1">
+                <span class="cc-num">04</span>
+                <span class="cc-label">Galicha</span>
+                <svg class="cc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="13 6 19 12 13 18"/>
+                </svg>
+              </button>
+
+            </div>
+
+
+            <!-- ── Right: detail panels ── -->
+            <div class="cc-detail">
+
+              <!-- Matt -->
+              <div class="cc-detail-panel is-active" id="cc-panel-matt" role="tabpanel"
+                aria-labelledby="cc-tab-matt">
+                <div class="cc-img">
+                  <img src="assets/images/1_600x600.jpeg"
+                    alt="Matt finish 600×600MM porcelain tile" loading="eager"/>
+                </div>
+                <div class="cc-meta">
+                  <p class="cc-meta-kicker">Finish 01</p>
+                  <h2 class="cc-meta-title">Matt</h2>
+                  <p class="cc-meta-desc">
+                    Soft, low-glare surface that absorbs light beautifully. Designed
+                    for sophisticated interiors where understated elegance is the goal —
+                    living rooms, bedrooms and bathrooms benefit from its non-reflective calm.
+                  </p>
+                  <ul class="cc-spec">
+                    <li><strong>Size</strong> 600 × 600 mm</li>
+                    <li><strong>Finish</strong> Matt</li>
+                    <li><strong>Application</strong> Indoor floors, walls</li>
+                    <li><strong>Thickness</strong> 9.0 mm</li>
+                  </ul>
+                  <div class="cc-cta-row">
+                    <a href="assets/documents/MATT GOLDENLAKE SERIES-2.pdf" class="cc-cta" download>
+                      Download Catalogue
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                      </svg>
+                    </a>
+                    <a href="contact.html" class="cc-cta cc-cta--outline">
+                      Enquire Now
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Glossy -->
+              <div class="cc-detail-panel" id="cc-panel-glossy" role="tabpanel"
+                aria-labelledby="cc-tab-glossy">
+                <div class="cc-img">
+                  <img src="assets/images/5_600x600.jpeg"
+                    alt="Glossy finish 600×600MM porcelain tile" loading="lazy"/>
+                </div>
+                <div class="cc-meta">
+                  <p class="cc-meta-kicker">Finish 02</p>
+                  <h2 class="cc-meta-title">Glossy</h2>
+                  <p class="cc-meta-desc">
+                    High-shine, mirror-finish porcelain that catches light and amplifies
+                    the sense of space. Ideal for compact rooms, feature walls and showrooms
+                    where you want a striking, modern aesthetic.
+                  </p>
+                  <ul class="cc-spec">
+                    <li><strong>Size</strong> 600 × 600 mm</li>
+                    <li><strong>Finish</strong> Glossy</li>
+                    <li><strong>Application</strong> Walls, accent floors</li>
+                    <li><strong>Thickness</strong> 9.0 mm</li>
+                  </ul>
+                  <div class="cc-cta-row">
+                    <a class="cc-cta" download>
+                      Comming Soon
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                      </svg>
+                    </a>
+                    <a href="contact.html" class="cc-cta cc-cta--outline">
+                      Enquire Now
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Outdoor -->
+              <div class="cc-detail-panel" id="cc-panel-outdoor" role="tabpanel"
+                aria-labelledby="cc-tab-outdoor">
+                <div class="cc-img">
+                  <img src="assets/images/3_600x600.jpeg"
+                    alt="Outdoor anti-slip 600×600MM porcelain tile" loading="lazy"/>
+                </div>
+                <div class="cc-meta">
+                  <p class="cc-meta-kicker">Finish 03</p>
+                  <h2 class="cc-meta-title">Outdoor</h2>
+                  <p class="cc-meta-desc">
+                    Anti-slip surface engineered for terraces, patios, pool surrounds
+                    and garden walkways. UV-resistant and freeze-thaw stable, with
+                    structural texture for safe footing in every season.
+                  </p>
+                  <ul class="cc-spec">
+                    <li><strong>Size</strong> 600 × 600 mm</li>
+                    <li><strong>Finish</strong> Anti-slip / Structured</li>
+                    <li><strong>Application</strong> Outdoor floors, pool decks</li>
+                    <li><strong>Thickness</strong> 20 mm</li>
+                  </ul>
+                  <div class="cc-cta-row">
+                    <a href="assets/documents/RUSTIC MERCURY PUNCH SERIES.pdf" class="cc-cta" download>
+                      Download Catalogue
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                      </svg>
+                    </a>
+                    <a href="contact.html" class="cc-cta cc-cta--outline">
+                      Enquire Now
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Galicha -->
+              <div class="cc-detail-panel" id="cc-panel-woodlook" role="tabpanel"
+                aria-labelledby="cc-tab-woodlook">
+                <div class="cc-img">
+                  <img src="assets/images/7_600x600.jpeg"
+                    alt="Galicha 600×600MM porcelain tile" loading="lazy"/>
+                </div>
+                <div class="cc-meta">
+                  <p class="cc-meta-kicker">Finish 04</p>
+                  <h2 class="cc-meta-title">Galicha</h2>
+                  <p class="cc-meta-desc">
+                    Authentic Galicha visuals in the durability of porcelain. The
+                    warmth of timber with none of the maintenance — perfect for high-traffic
+                    living areas, kitchens and outdoor decks alike.
+                  </p>
+                  <ul class="cc-spec">
+                    <li><strong>Size</strong> 600 × 600 mm</li>
+                    <li><strong>Finish</strong> Wood-grain</li>
+                    <li><strong>Application</strong> Floors, decks</li>
+                    <li><strong>Thickness</strong> 9.0 mm</li>
+                  </ul>
+                  <div class="cc-cta-row">
+                    <a href="assets/documents/MATT GALICHA SERIES.pdf" class="cc-cta" download>
+                      Download Catalogue
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                      </svg>
+                    </a>
+                    <a href="contact.html" class="cc-cta cc-cta--outline">
+                      Enquire Now
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- / cc-detail -->
+
+          </div>
+          <!-- / cc-grid -->
+
+        </div>
+      </section>
+      <!-- / #section-collection-hero -->
+
+
+      <!-- ══════════════════════════════════════════
+           SECTION 2 — CATALOGUE / DOWNLOADS
+           (Copied verbatim from index.html SECTION 3)
+      ══════════════════════════════════════════ -->
+      <section id="section-collection" class="site-section cat-section">
+
+        <!-- Side border lines -->
+        <div class="cat-border-left"></div>
+        <div class="cat-border-right"></div>
+
+        <div class="cat-inner">
+
+          <!-- ════ 600×600MM Collection ════ -->
+          <div class="cat-group">
+            <h2 class="cat-group-title">600×600MM Collection</h2>
+            <div class="cat-grid">
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/1_600x600.jpeg"
+                    alt="Golden Lake" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>1</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/MATT GOLDENLAKE SERIES-2.pdf"
+                          target="_blank">Golden Lake</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/MATT GOLDENLAKE SERIES-2.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/3_600x600.jpeg"
+                    alt="Rustic Mercury" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>2</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/RUSTIC MERCURY PUNCH SERIES.pdf"
+                          target="_blank">Rustic Mercury</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/RUSTIC MERCURY PUNCH SERIES.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/4_600x600.jpeg"
+                    alt="Terrazo" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>3</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/MATT TERRAZO SERIES-Copy.pdf"
+                          target="_blank">Terrazo</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/MATT TERRAZO SERIES-Copy.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/6_600x600.jpeg"
+                    alt="Candy Sugar" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>4</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/CANDY SUGAR_compressed.pdf"
+                          target="_blank">Candy Sugar</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/CANDY SUGAR_compressed.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/7_600x600.jpeg"
+                    alt="Galicha" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>5</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/MATT GALICHA SERIES.pdf"
+                          target="_blank">Galicha</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/MATT GALICHA SERIES.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/9_600x600.jpeg"
+                    alt="Moroccan" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>6</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/PUNCH MOROCCAN.pdf"
+                          target="_blank">Moroccan</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/PUNCH MOROCCAN.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/10_600x600.jpeg"
+                    alt="Cool Roof" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>7</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/MATT CONCEPT SERIES.pdf"
+                          target="_blank">Cool Roof</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/MATT CONCEPT SERIES.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/2_600x600.jpeg"
+                    alt="Dura Stone" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>8</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a target="_blank">Dura Stone</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a class="blog-one__btn" download>
+                      comming soon
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/8_600x600.jpeg"
+                    alt="Kitkat Series" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>9</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a target="_blank">Kitkat Series</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a
+                      class="blog-one__btn" download>
+                      Comming Soon
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/5_600x600.jpeg"
+                    alt="Lucido" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>10</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a target="_blank">Lucido</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a class="blog-one__btn" download>
+                      Comming Soon
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div><!-- /cat-inner -->
+      </section>
+      <!-- / #section-collection -->
+
+    </main>
+    <!-- / #site-main -->
+
+
+    <!-- ┌─────────────────────────────────────────────┐
+         │  #site-footer                               │
+         └─────────────────────────────────────────────┘ -->
+    <footer id="site-footer">
+      <div class="footer-inner">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Extrano Tiles home">
+            <img src="assets/images/logo.png" alt="Extrano Tiles"/>
+          </a>
+          <p class="footer-tagline">
+            Premier manufacturer of porcelain tiles &mdash;
+            crafted in Morbi, Gujarat and delivered worldwide.
+          </p>
+        </div>
+
+        <!-- Call Us -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Call Us</h4>
+          <ul class="footer-list">
+            <li><a href="tel:+917226855653">+91 72268 55653</a></li>
+          </ul>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Follow Us</h4>
+          <ul class="footer-social">
+            <li>
+              <a href="https://wa.me/7226855653" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.298-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.015-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.488 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785a9.86 9.86 0 0 1-5.022-1.378l-.36-.214-3.74.981.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.992c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/extranotiles?igsh=MWxhMGgwM295OGNsag%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/share/1EFcHT2ivU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M22 12a10 10 0 1 0-11.563 9.879v-6.988h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.891h-2.33v6.988A10.002 10.002 0 0 0 22 12"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/extranotiles" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Inquiry -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Inquiry</h4>
+          <ul class="footer-list">
+            <li><a href="mailto:extranotiles@gmail.com">extranotiles@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <!-- Address -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Address</h4>
+          <address class="footer-address">
+            Second Floor, Wing A, Flat No. 201,<br>
+            Shivam Heights, Ravapar Ghunada Road,<br>
+            Ravapar Panchayat Bhavan, Survey No. 157/2,<br>
+            Plot No. 2P, Ravapara,<br>
+            Morbi, Gujarat - 363641, India
+          </address>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Extrano Tiles. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- / #site-footer -->
+
+
+  </div>
+  <!-- / #site-wrap -->
+
+  <!-- Floating Contact Widget -->
+  <script src="assets/js/widget.js" defer></script>
+
+</body>
+
+</html>

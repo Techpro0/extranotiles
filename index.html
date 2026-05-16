@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extrano Tiles - Premier Manufacturer of Large porcelain tiles</title>
+  <meta name="description" content="Discover the epitome of elegance with Extrano Tiles's custom porcelain tiles." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/widget.css">
+  
+  <!-- Scripts -->
+  <script src="assets/js/jquery/3.7.1/jquery.min.js"></script>
+  <script src="assets/js/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="assets/js/home.js"></script>
+</head>
+
+<body>
+
+  <!-- ╔═══════════════════════════════════════════════╗
+       ║  GLOBAL OVERLAYS  (outside site-wrap)         ║
+       ╚═══════════════════════════════════════════════╝ -->
+
+  <!-- Page-load logo intro loader (white overlay; logo clone appended via JS) -->
+  <div id="logo-loader" aria-hidden="true"></div>
+
+  <!-- Background geometry canvas — grid + spider-web, sits behind everything -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" aria-hidden="true">
+    <button class="close-btn" onclick="closeMobile()" aria-label="Close menu">&times;</button>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <div class="mm-group">
+      <button type="button" class="mm-trigger" aria-expanded="false">
+        Collection
+        <svg class="mm-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="mm-sub">
+        <a href="collection-600x600.html">600×600mm</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+
+
+  <!-- ╔═══════════════════════════════════════════════╗
+       ║  #site-wrap — master wrapper                 ║
+       ╚═══════════════════════════════════════════════╝ -->
+  <div id="site-wrap">
+
+    <!-- ┌─────────────────────────────────────────────┐
+         │  #site-header  (fixed navbar)               │
+         └─────────────────────────────────────────────┘ -->
+    <header id="site-header">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Extrano Tiles" class="nav-logo-img"/>
+      </a>
+
+      <!-- Nav links -->
+      <ul class="nav-links">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-drop">
+          <a>Collection</a>
+          <div class="drop-panel">
+            <a href="collection-600x600.html">600×600mm</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="ham" onclick="openMobile()" aria-label="Open menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </header>
+    <!-- / #site-header -->
+
+
+    <!-- ┌─────────────────────────────────────────────┐
+         │  #site-main — all page sections             │
+         └─────────────────────────────────────────────┘ -->
+    <main id="site-main">
+
+      <!-- ══════════════════════════════════════════
+           SECTION 1 — Hero Slider
+      ══════════════════════════════════════════ -->
+      <section id="section-hero">
+
+        <!-- OWL Carousel -->
+        <div class="owl-carousel" id="heroCarousel">
+
+          <!-- Slide 1 -->
+          <div class="slider-item">
+            <div class="slide-bg" style="background-image:url('assets/images/AdobeStock_1089606293.jpeg')">
+            </div>
+            <div class="slide-body">
+              <p class="slide-kicker">We Craft</p>
+              <h2 class="slide-title">Tiles That Speak<br>To Your Senses</h2>
+              <p class="slide-desc">Discover the timeless allure of porcelain tiles that elevate every space with
+                enduring beauty and sophisticated craftsmanship.</p>
+              <div class="slide-btn-box">
+                <a href="about.html" class="slide-cta">
+                  Explore More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slider-item">
+            <div class="slide-bg"
+              style="background-image:url('assets/images/AdobeStock_868586827.jpeg')"></div>
+            <div class="slide-body">
+              <p class="slide-kicker">Premier Manufacturer</p>
+              <h2 class="slide-title">Large Porcelain<br>Slab Excellence</h2>
+              <p class="slide-desc">As the premier manufacturer of large porcelain tiles, our unwavering commitment
+                to excellence defines every piece we create.</p>
+              <div class="slide-btn-box">
+                <a href="about.html" class="slide-cta">
+                  Explore More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slider-item">
+            <div class="slide-bg" style="background-image:url('assets/images/AdobeStock_1037385307.jpeg')">
+            </div>
+            <div class="slide-body">
+              <p class="slide-kicker">Innovation & Artistry</p>
+              <h2 class="slide-title">Cutting-Edge<br>Ceramic Technology</h2>
+              <p class="slide-desc">Where innovation meets artistry — CONTINUA+, SACMI kilns, and Durst printing
+                machines combine to redefine elegance and quality.</p>
+              <div class="slide-btn-box">
+                <a href="about.html" class="slide-cta">
+                  Explore More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- / OWL Carousel -->
+
+        <!-- Slide counter -->
+        <div class="slider-counter">
+          <span class="cur" id="curNum">01</span>
+          <span>/</span>
+          <span>03</span>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="slider-progress-wrap">
+          <div class="slider-progress-bar" id="progressBar"></div>
+        </div>
+
+      </section>
+      <!-- / #section-hero -->
+
+
+      <!-- ══════════════════════════════════════════
+           SECTION 2 — (Add next section here)
+           Example: Who We Are, Collection, etc.
+      ══════════════════════════════════════════ -->
+      <section id="section-about" class="site-section feat-section">
+
+        <!-- Optional top label — matches kicker style from hero -->
+        <div class="feat-eyebrow">
+          <span class="feat-eyebrow-line"></span>
+          Why Extrano
+          <span class="feat-eyebrow-line"></span>
+        </div>
+
+        <!-- 3-column grid -->
+        <div class="feat-grid">
+
+          <!-- Card 1: Designs -->
+          <div class="feat-card">
+            <div class="feat-icon-wrap">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#9e7a4a" stroke-width="1.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="32" cy="22" r="10" />
+                <path d="M32 12 L32 4" />
+                <path d="M22 22 L6 50 M42 22 L58 50" />
+                <path d="M14 44 L50 44" />
+                <path d="M10 50 L54 50" />
+              </svg>
+            </div>
+            <h3 class="feat-title">Designs</h3>
+            <p class="feat-body">
+              Elevate your spaces with designs that blend timeless elegance and contemporary sophistication. Crafted
+              using cutting-edge technology, our surfaces mirror the beauty of natural materials while delivering
+              durability, low maintenance, and superior performance.
+            </p>
+            <div class="feat-ornament">
+              <span class="feat-line"></span>
+              <span class="feat-dot"></span>
+              <span class="feat-line"></span>
+            </div>
+          </div>
+
+          <!-- Card 2: Hues -->
+          <div class="feat-card">
+            <div class="feat-icon-wrap">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#9e7a4a" stroke-width="1.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M32 8 C18 8 8 18 8 32 C8 46 18 56 32 56 C39 56 40 50 40 46 C40 42 41 40 44 40 L56 40 C56 40 56 32 56 32 C56 18 46 8 32 8 Z" />
+                <circle cx="22" cy="26" r="3" fill="#9e7a4a" />
+                <circle cx="34" cy="18" r="3" fill="#9e7a4a" />
+                <circle cx="46" cy="28" r="3" fill="#9e7a4a" />
+                <circle cx="22" cy="38" r="3" fill="#9e7a4a" />
+              </svg>
+            </div>
+            <h3 class="feat-title">Hues</h3>
+            <p class="feat-body">
+              A thoughtfully curated color palette forms the foundation of memorable spaces. From subtle neutrals to
+              bold hues, our color-stable surfaces retain their vibrancy over time, resisting fading from light and
+              everyday use while complementing any design style.
+            </p>
+            <div class="feat-ornament">
+              <span class="feat-line"></span>
+              <span class="feat-dot"></span>
+              <span class="feat-line"></span>
+            </div>
+          </div>
+
+          <!-- Card 3: Durability -->
+          <div class="feat-card">
+            <div class="feat-icon-wrap">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#9e7a4a" stroke-width="1.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 6 L54 16 L54 34 C54 46 44 56 32 58 C20 56 10 46 10 34 L10 16 Z" />
+                <polyline points="22,32 29,39 42,26" />
+              </svg>
+            </div>
+            <h3 class="feat-title">Durability</h3>
+            <p class="feat-body">
+              Engineered for contemporary lifestyles, our surfaces combine durability with elegance. Tested against
+              scratches, stains, moisture, and impact, they ensure lasting performance while maintaining their refined
+              appearance over time.
+            </p>
+            <div class="feat-ornament">
+              <span class="feat-line"></span>
+              <span class="feat-dot"></span>
+              <span class="feat-line"></span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SECTION 3 — CATALOGUE / DOWNLOADS
+      ══════════════════════════════════════════ -->
+      <section id="section-collection" class="site-section cat-section">
+
+        <!-- Side border lines -->
+        <div class="cat-border-left"></div>
+        <div class="cat-border-right"></div>
+
+        <div class="cat-inner">
+
+          <!-- ════ 600×600MM Collection ════ -->
+          <div class="cat-group">
+            <h2 class="cat-group-title">600×600MM Collection</h2>
+            <div class="cat-grid">
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/1_600x600.jpeg"
+                    alt="Golden Lake" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>1</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/MATT GOLDENLAKE SERIES-2.pdf"
+                          target="_blank">Golden Lake</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/MATT GOLDENLAKE SERIES-2.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/3_600x600.jpeg"
+                    alt="Rustic Mercury" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>2</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/RUSTIC MERCURY PUNCH SERIES.pdf"
+                          target="_blank">Rustic Mercury</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/RUSTIC MERCURY PUNCH SERIES.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/4_600x600.jpeg"
+                    alt="Terrazo" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>3</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/MATT TERRAZO SERIES-Copy.pdf"
+                          target="_blank">Terrazo</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/MATT TERRAZO SERIES-Copy.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/6_600x600.jpeg"
+                    alt="Candy Sugar" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>4</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/CANDY SUGAR_compressed.pdf"
+                          target="_blank">Candy Sugar</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/CANDY SUGAR_compressed.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/7_600x600.jpeg"
+                    alt="Galicha" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>5</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/MATT GALICHA SERIES.pdf"
+                          target="_blank">Galicha</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/MATT GALICHA SERIES.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/9_600x600.jpeg"
+                    alt="Moroccan" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>6</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/PUNCH MOROCCAN.pdf"
+                          target="_blank">Moroccan</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/PUNCH MOROCCAN.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/10_600x600.jpeg"
+                    alt="Cool Roof" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>7</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="assets/documents/MATT CONCEPT SERIES.pdf"
+                          target="_blank">Cool Roof</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="assets/documents/MATT CONCEPT SERIES.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/2_600x600.jpeg"
+                    alt="Dura Stone" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>8</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a target="_blank">Dura Stone</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a class="blog-one__btn" download>
+                      comming soon
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/8_600x600.jpeg"
+                    alt="Kitkat Series" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>9</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a target="_blank">Kitkat Series</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a
+                      class="blog-one__btn" download>
+                      Comming Soon
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="assets/images/5_600x600.jpeg"
+                    alt="Lucido" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>10</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a target="_blank">Lucido</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a class="blog-one__btn" download>
+                      Comming Soon
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ════ 400×400MM Collection ════ -->
+          <!-- <div class="cat-group">
+            <h2 class="cat-group-title">400×400MM Collection</h2>
+            <div class="cat-grid">
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186432.jpg"
+                    alt="Harmony Series" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>1</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186432.pdf"
+                          target="_blank">Harmony Series</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186432.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186453.jpg"
+                    alt="Homescape Series" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>2</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186453.pdf"
+                          target="_blank">Homescape Series</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186453.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186471.jpg"
+                    alt="Indimito Series" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>3</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186471.pdf"
+                          target="_blank">Indimito Series</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186471.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186489.jpg"
+                    alt="Keynotes Series" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>4</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186489.pdf"
+                          target="_blank">Keynotes Series</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186489.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186507.jpg"
+                    alt="Nunance Series" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>5</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186507.pdf"
+                          target="_blank">Nunance Series</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186507.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-one__single">
+                <div class="blog-one__img">
+                  <img src="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186528.jpg"
+                    alt="Planeto Series" loading="lazy" />
+                </div>
+                <div class="blog-one__content">
+                  <div class="blog-one__date-and-title-box">
+                    <div class="blog-one__date">
+                      <h3>6</h3>
+                    </div>
+                    <div class="blog-one__title-box">
+                      <h3 class="blog-one__title">
+                        <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186528.pdf"
+                          target="_blank">Planeto Series</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="blog-one__btn-box">
+                    <a href="https://ldecorporcelano.com/website/adminproduct/catalogues/1753186528.pdf"
+                      class="blog-one__btn" download>
+                      Download
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> -->
+
+        </div><!-- /cat-inner -->
+      </section>
+      <!-- / #section-collection -->
+
+      <!-- ══════════════════════════════════════════
+           SECTION 4 — ABOUT US
+      ══════════════════════════════════════════ -->
+      <section id="section-technology" class="site-section about-section">
+
+        <div class="about-inner">
+
+          <!-- Left: text -->
+          <div class="about-left">
+
+            <p class="about-eyebrow">About Extrano Tiles</p>
+
+            <h2 class="about-heading">
+              Crafting Surfaces<br>
+              <em>That Define Spaces</em>
+            </h2>
+
+            <p class="about-body">
+              At Extrano Tiles, we blend meticulous research, boundless creativity, and
+              precision engineering to craft porcelain tiles that elevate both indoor
+              and outdoor spaces to new heights of sophistication.
+            </p>
+            <p class="about-body">
+              As a premier manufacturer based in Morbi, Gujarat, our distinctive color palettes,
+              textural innovations, and dimensional depth emerge from rigorous aesthetic exploration
+              and cutting-edge ceramic technology — creating solutions perfectly attuned to
+              modern living.
+            </p>
+
+            <div class="about-divider"></div>
+
+            <a href="about.html" class="about-cta">
+              Explore More
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </a>
+
+          </div>
+
+          <!-- Right: image -->
+          <div class="about-right">
+            <div class="about-img-wrap">
+              <img src="assets/images/plant.jpeg"
+                alt="Extrano Tiles — Crafting Excellence" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Stat counters -->
+        <div class="about-stats">
+
+          <div class="about-stat">
+            <div class="about-stat-num">
+              <span class="count-num" data-target="15">0</span><span>+ Yrs</span>
+            </div>
+            <p class="about-stat-label">Years of Experience</p>
+          </div>
+
+          <div class="about-stat">
+            <div class="about-stat-num">
+              <span class="count-num" data-target="3200">0</span><span>+</span>
+            </div>
+            <p class="about-stat-label">Tile Designs</p>
+          </div>
+
+          <div class="about-stat">
+            <div class="about-stat-num">
+              <span class="count-num" data-target="30">0</span><span>+ Countries</span>
+            </div>
+            <p class="about-stat-label">Global Exports</p>
+          </div>
+
+          <div class="about-stat">
+            <div class="about-stat-num">
+              <span class="count-num" data-target="10000">0</span><span>+</span>
+            </div>
+            <p class="about-stat-label">Projects Completed</p>
+          </div>
+
+        </div>
+
+      </section>
+      <!-- / #section-technology -->
+
+    </main>
+    <!-- / #site-main -->
+
+
+    <!-- ┌─────────────────────────────────────────────┐
+         │  #site-footer                               │
+         └─────────────────────────────────────────────┘ -->
+    <footer id="site-footer">
+      <div class="footer-inner">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Extrano Tiles home">
+            <img src="assets/images/logo.png" alt="Extrano Tiles"/>
+          </a>
+          <p class="footer-tagline">
+            Premier manufacturer of porcelain tiles &mdash;
+            crafted in Morbi, Gujarat and delivered worldwide.
+          </p>
+        </div>
+
+        <!-- Call Us -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Call Us</h4>
+          <ul class="footer-list">
+            <li><a href="tel:+917226855653">+91 72268 55653</a></li>
+          </ul>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Follow Us</h4>
+          <ul class="footer-social">
+            <li>
+              <a href="https://wa.me/7226855653" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.298-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.015-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.488 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785a9.86 9.86 0 0 1-5.022-1.378l-.36-.214-3.74.981.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.992c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/extranotiles?igsh=MWxhMGgwM295OGNsag%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/share/1EFcHT2ivU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M22 12a10 10 0 1 0-11.563 9.879v-6.988h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.891h-2.33v6.988A10.002 10.002 0 0 0 22 12"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/extranotiles" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Inquiry -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Inquiry</h4>
+          <ul class="footer-list">
+            <li><a href="mailto:extranotiles@gmail.com">extranotiles@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <!-- Address -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Address</h4>
+          <address class="footer-address">
+            Second Floor, Wing A, Flat No. 201,<br>
+            Shivam Heights, Ravapar Ghunada Road,<br>
+            Ravapar Panchayat Bhavan, Survey No. 157/2,<br>
+            Plot No. 2P, Ravapara,<br>
+            Morbi, Gujarat - 363641, India
+          </address>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Extrano Tiles. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- / #site-footer -->
+
+
+  </div>
+  <!-- / #site-wrap -->
+
+  <!-- ┌─────────────────────────────────────────────┐
+       │  FLOATING CONTACT WIDGET                    │
+       └─────────────────────────────────────────────┘ -->
+  <link rel="stylesheet" href="assets/css/widget.css">
+  <script src="assets/js/widget.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — Extrano Tiles</title>
+  <meta name="description" content="The architects of porcelain innovation. Crafted in Morbi, Gujarat."/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/widget.css">
+</head>
+<body>
+
+<!-- ─── NAV ──────────────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/logo.png" alt="Extrano Tiles" class="nav-logo-img"/>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li class="has-drop">
+      <a>Collection</a>
+      <div class="drop-panel">
+        <a href="collection-600x600.html">600×600mm</a>
+      </div>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── MOBILE MENU OVERLAY ──────────────────────────── -->
+<div id="mobile-menu" aria-hidden="true">
+  <button class="mm-close" id="mm-close" aria-label="Close menu">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <div class="mm-group">
+    <button type="button" class="mm-trigger" aria-expanded="false">
+      Collection
+      <svg class="mm-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </button>
+    <div class="mm-sub">
+      <a href="collection-600x600.html">600×600mm</a>
+    </div>
+  </div>
+  <a href="contact.html">Contact</a>
+</div>
+
+
+<!-- ─── HERO ──────────────────────────────────────────── -->
+<section id="hero">
+
+  <span class="hero-ghost">PORCELAIN</span>
+
+  <div class="hero-left">
+    <p class="hero-tag">Est. 2009 — Morbi, Gujarat</p>
+    <h1 class="hero-h1">
+      Architects<br>of Porcelain
+      <em>Innovation</em>
+    </h1>
+    <p class="hero-desc">
+      We don't just manufacture tiles — we engineer environments.
+      Every surface we create is born from rigorous research,
+      boundless creativity, and the relentless pursuit of perfection.
+    </p>
+    <!-- <a href="#who" class="hero-cta">
+      Discover Our Story
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+      </svg>
+    </a> -->
+  </div>
+
+  <!-- Spinning badge -->
+  <div class="hero-badge">
+    <svg viewBox="0 0 110 110" width="110" height="110">
+      <defs>
+        <path id="circle-path" d="M 55,55 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+      </defs>
+      <text fill="#c4a06a" font-size="9.5" font-family="Montserrat,sans-serif" font-weight="700" letter-spacing="3.2">
+        <textPath href="#circle-path">EXTRANO TILES • PORCELAIN EXCELLENCE • </textPath>
+      </text>
+    </svg>
+    <div class="hero-badge-dot"></div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-line"><span>Scroll</span></div>
+
+  <div class="hero-right">
+    <img src="assets/images/plant.jpeg"
+         alt="Extrano Tiles Showroom" loading="eager"/>
+  </div>
+
+</section>
+
+
+<!-- ─── MARQUEE ───────────────────────────────────────── -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Premier Manufacturer</span><span class="sep">•</span>
+    <span>Porcelain Excellence</span><span class="sep">•</span>
+    <span>Crafted in Morbi</span><span class="sep">•</span>
+    <span>Est. 2009</span><span class="sep">•</span>
+    <span>30+ Countries</span><span class="sep">•</span>
+    <span>3200+ Designs</span><span class="sep">•</span>
+    <span>Premier Manufacturer</span><span class="sep">•</span>
+    <span>Porcelain Excellence</span><span class="sep">•</span>
+    <span>Crafted in Morbi</span><span class="sep">•</span>
+    <span>Est. 2009</span><span class="sep">•</span>
+    <span>30+ Countries</span><span class="sep">•</span>
+    <span>3200+ Designs</span><span class="sep">•</span>
+  </div>
+</div>
+
+
+<!-- ─── WHO WE ARE ────────────────────────────────────── -->
+<section id="who">
+  <span class="who-watermark">01</span>
+  <div class="s-inner">
+
+    <div class="who-grid">
+
+      <!-- Left: text -->
+      <div>
+        <p class="s-eyebrow reveal from-left" style="--d:0ms">Who We Are</p>
+        <h2 class="who-heading reveal from-left" style="--d:100ms">
+          <strong>Our Story</strong>
+          Where Science<br>Meets Artistry
+        </h2>
+        <p class="who-body reveal from-left" style="--d:200ms">
+          At Extrano Tiles, we unite meticulous research, boundless creativity, and
+          precision engineering to craft porcelain tiles that elevate both indoor
+          and outdoor spaces to new heights of sophistication.
+        </p>
+        <p class="who-body reveal from-left" style="--d:300ms">
+          Based in Morbi — India's ceramic capital — our distinctive color palettes,
+          textural innovations, and dimensional depth emerge from rigorous aesthetic
+          exploration and cutting-edge ceramic technology, creating solutions perfectly
+          attuned to modern living.
+        </p>
+
+        <!-- Stat counters -->
+        <div class="who-stats reveal" style="--d:400ms">
+          <div class="who-stat">
+            <p class="who-stat-n"><span class="c-num" data-t="15">0</span><sup>+</sup></p>
+            <p class="who-stat-l">Years Experience</p>
+          </div>
+          <div class="who-stat">
+            <p class="who-stat-n"><span class="c-num" data-t="3200">0</span><sup>+</sup></p>
+            <p class="who-stat-l">Tile Designs</p>
+          </div>
+          <div class="who-stat">
+            <p class="who-stat-n"><span class="c-num" data-t="30">0</span><sup>+</sup></p>
+            <p class="who-stat-l">Export Countries</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: stacked images -->
+      <div class="who-img-wrap reveal from-right" style="--d:150ms">
+        <img class="who-img-main"
+             src="assets/images/reception.jpeg"
+             alt="Extrano Tiles — Craftsmanship"/>
+        <!-- <img class="who-img-accent"
+             src="assets/images/reception.jpeg"
+             alt="Extrano Tiles Reception"/> -->
+        <div class="who-gold-frame"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── COMMITMENT ────────────────────────────────────── -->
+<section id="commitment">
+  <div class="s-inner">
+    <div class="commit-head reveal">
+      <p class="s-eyebrow" style="justify-content:center">Our Commitment</p>
+      <h2 class="commit-title">Excellence in Everything We Do</h2>
+    </div>
+
+    <div class="commit-grid">
+
+      <div class="commit-card reveal" style="--d:0ms">
+        <span class="commit-num">01</span>
+        <svg class="commit-icon" viewBox="0 0 56 56" fill="none" stroke="#9e7a4a" stroke-width="1.2" stroke-linecap="round">
+          <circle cx="28" cy="20" r="10"/>
+          <path d="M28 10 L28 4 M18 20 L4 46 M38 20 L52 46"/>
+          <line x1="10" y1="40" x2="46" y2="40"/>
+          <line x1="6" y1="46" x2="50" y2="46"/>
+        </svg>
+        <h3 class="commit-card-title">Manufacturing Integrity</h3>
+        <p class="commit-card-body">
+          We prioritize ethical practices and sustainability throughout our production
+          process, sourcing responsibly and employing energy-efficient methods to
+          minimize environmental impact at every stage.
+        </p>
+        <div class="commit-card-bar"></div>
+      </div>
+
+      <div class="commit-card reveal" style="--d:120ms">
+        <span class="commit-num">02</span>
+        <svg class="commit-icon" viewBox="0 0 56 56" fill="none" stroke="#9e7a4a" stroke-width="1.2" stroke-linecap="round">
+          <path d="M28 6 C16 6 6 16 6 28 C6 40 16 50 28 50 C34 50 35 44 35 40 C35 36 36 34 39 34 L50 34"/>
+          <circle cx="20" cy="23" r="2.5" fill="#9e7a4a"/>
+          <circle cx="30" cy="15" r="2.5" fill="#9e7a4a"/>
+          <circle cx="40" cy="24" r="2.5" fill="#9e7a4a"/>
+          <circle cx="20" cy="33" r="2.5" fill="#9e7a4a"/>
+        </svg>
+        <h3 class="commit-card-title">Design Innovation</h3>
+        <p class="commit-card-body">
+          Our designers draw global inspiration from architecture, nature, and art
+          to create distinctive collections that transcend trends, delivering surfaces
+          with meaningful design narratives for every space.
+        </p>
+        <div class="commit-card-bar"></div>
+      </div>
+
+      <div class="commit-card reveal" style="--d:240ms">
+        <span class="commit-num">03</span>
+        <svg class="commit-icon" viewBox="0 0 56 56" fill="none" stroke="#9e7a4a" stroke-width="1.2" stroke-linecap="round">
+          <path d="M28 4 L50 14 L50 32 C50 44 40 52 28 54 C16 52 6 44 6 32 L6 14 Z"/>
+          <polyline points="18,28 25,35 38,22"/>
+        </svg>
+        <h3 class="commit-card-title">Premium Performance</h3>
+        <p class="commit-card-body">
+          Every Extrano Tiles surface undergoes rigorous testing to ensure exceptional
+          durability and consistency across all environments, maintaining their
+          beauty despite heavy use and environmental challenges.
+        </p>
+        <div class="commit-card-bar"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── PROCESS ───────────────────────────────────────── -->
+<section id="process">
+  <span class="process-watermark">02</span>
+  <div class="s-inner">
+
+    <div class="process-head">
+      <p class="s-eyebrow reveal from-left">How We Work</p>
+      <h2 class="commit-title reveal from-left" style="--d:100ms">Excellence at Every Stage</h2>
+    </div>
+
+    <div class="process-grid">
+
+      <!-- Steps -->
+      <div class="process-steps">
+        <div class="process-step reveal from-left" style="--d:0ms">
+          <div class="step-dot">01</div>
+          <div class="step-content">
+            <h3 class="step-title">Premium Raw Materials</h3>
+            <p class="step-body">We source only the finest materials from trusted suppliers worldwide, ensuring every Extrano Tiles surface meets strict environmental and performance standards before production begins.</p>
+          </div>
+        </div>
+        <div class="process-step reveal from-left" style="--d:120ms">
+          <div class="step-dot">02</div>
+          <div class="step-content">
+            <h3 class="step-title">Innovative R&amp;D</h3>
+            <p class="step-body">Our dedicated research team continuously tests countless prototypes and pushes ceramic boundaries to perfect each collection before it enters full-scale production.</p>
+          </div>
+        </div>
+        <div class="process-step reveal from-left" style="--d:240ms">
+          <div class="step-dot">03</div>
+          <div class="step-content">
+            <h3 class="step-title">Comprehensive Quality Control</h3>
+            <p class="step-body">Every surface undergoes multiple inspections throughout manufacturing, with advanced testing for strength, colour consistency, and dimensional accuracy to guarantee flawless products.</p>
+          </div>
+        </div>
+        <div class="process-step reveal from-left" style="--d:360ms">
+          <div class="step-dot">04</div>
+          <div class="step-content">
+            <h3 class="step-title">Dedicated Customer Support</h3>
+            <p class="step-body">Our expert team provides exceptional after-sales support, ensuring complete satisfaction long after your Extrano Tiles are installed and your vision has come to life.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="process-img-wrap reveal from-right" style="--d:150ms">
+        <img src="assets/images/aboutart.jpg"
+             alt="Manufacturing excellence"/>
+        <p class="process-img-caption">Precision at every step</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── GALLERY ───────────────────────────────────────── -->
+<section id="gallery">
+  <div class="s-inner">
+    <div class="gallery-head reveal">
+      <h2 class="gallery-title">
+        <strong>Our Surfaces</strong>
+        Architectural Beauty for<br>Everyday Inspiration
+      </h2>
+    </div>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item reveal" style="--d:0ms">
+      <img src="assets/images/ELEGANTBEIGE.jpg" alt="Elegant Beige Marble Carving"/>
+      <div class="gallery-overlay"><span class="gallery-name">Elegant Beige — Marble Carving</span></div>
+    </div>
+    <div class="gallery-item reveal" style="--d:100ms">
+      <img src="assets/images/LATTICEBLACK.jpg" alt="Lattice Black"/>
+      <div class="gallery-overlay"><span class="gallery-name">Lattice Black — Moroccan Punch</span></div>
+    </div>
+    <div class="gallery-item reveal" style="--d:200ms">
+      <img src="assets/images/PASTELMAJENTA.jpg" alt="Pastel Magenta"/>
+      <div class="gallery-overlay"><span class="gallery-name">Pastel Magenta — Pastel Series</span></div>
+    </div>
+    <div class="gallery-item reveal" style="--d:300ms">
+      <img src="assets/images/ROCCARADIANCE.jpg" alt="Rocca Radiance"/>
+      <div class="gallery-overlay"><span class="gallery-name">Rocca Radiance — Matt Moroccan</span></div>
+    </div>
+    <div class="gallery-item reveal" style="--d:400ms">
+      <img src="assets/images/TERRAFORCEBROWN.jpg" alt="Terraforce Brown"/>
+      <div class="gallery-overlay"><span class="gallery-name">Terraforce Brown — Matt</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── CTA ───────────────────────────────────────────── -->
+<section id="cta">
+  <span class="cta-bg-text">EXTRANO</span>
+  <div class="reveal">
+    <p class="cta-tag">Let's Connect</p>
+    <h2 class="cta-heading">
+      <strong>Ready to Transform</strong>
+      Your Space?
+    </h2>
+    <p class="cta-sub">
+      Whether you're an architect, interior designer, or homeowner —
+      our team is ready to help you find the perfect surface for your vision.
+    </p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-primary">
+        Contact Us
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+      <a href="index.html#section-collection" class="btn-outline">
+        View Catalogue
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── FOOTER ────────────────────────────────────────── -->
+<footer id="site-footer">
+  <div class="footer-inner">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo" aria-label="Extrano Tiles home">
+        <img src="assets/images/logo.png" alt="Extrano Tiles"/>
+      </a>
+      <p class="footer-tagline">
+        Premier manufacturer of porcelain tiles &mdash;
+        crafted in Morbi, Gujarat and delivered worldwide.
+      </p>
+    </div>
+
+    <!-- Call Us -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Call Us</h4>
+      <ul class="footer-list">
+        <li><a href="tel:+917226855653">+91 72268 55653</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Follow Us</h4>
+      <ul class="footer-social">
+        <li>
+          <a href="https://wa.me/7226855653" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.298-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.015-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.488 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785a9.86 9.86 0 0 1-5.022-1.378l-.36-.214-3.74.981.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.437-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.992c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/extranotiles?igsh=MWxhMGgwM295OGNsag%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/share/1EFcHT2ivU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M22 12a10 10 0 1 0-11.563 9.879v-6.988h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.891h-2.33v6.988A10.002 10.002 0 0 0 22 12"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/extranotiles" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Inquiry -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Inquiry</h4>
+      <ul class="footer-list">
+        <li><a href="mailto:extranotiles@gmail.com">extranotiles@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Address</h4>
+      <address class="footer-address">
+        Second Floor, Wing A, Flat No. 201,<br>
+        Shivam Heights, Ravapar Ghunada Road,<br>
+        Ravapar Panchayat Bhavan, Survey No. 157/2,<br>
+        Plot No. 2P, Ravapara,<br>
+        Morbi, Gujarat - 363641, India
+      </address>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Extrano Tiles. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="assets/js/about.js"></script>
+
+<!-- Floating Contact Widget -->
+<script src="assets/js/widget.js" defer></script>
+
+</body>
+</html>
